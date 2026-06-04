@@ -1,0 +1,154 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "RAG Collection",
+    "description": "Postman collection for testing the RAG Challenge API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ask Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_name\": \"Test User\",\n  \"question\": \"¿Quién es Zara?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/ask",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "ask"
+          ]
+        },
+        "description": "Send a question to the RAG API and receive an LLM-generated answer."
+      },
+      "response": [
+        {
+          "name": "¿Quién es Zara?",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_name\": \"Test User\",\n  \"question\": \"¿Quién es Zara?\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/ask",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "ask"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"user_name\": \"Test User\",\n  \"question\": \"¿Quién es Zara?\",\n  \"answer\": \"Zara es una intrépida exploradora que descubre un antiguo artefacto que podría ser la clave para la paz en la galaxia de Zenthoria. 🚀✨\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "name": "What did Emma decide to do?",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_name\": \"Test User\",\n  \"question\": \"What did Emma decide to do?\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/ask",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "ask"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"user_name\": \"Test User\",\n  \"question\": \"What did Emma decide to do?\",\n  \"answer\": \"Emma decided to share her extra day gift with the town, leaving an indelible mark on every inhabitant's heart. 🎁❤️\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "name": "What is the name of the magical flower?",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_name\": \"Test User\",\n  \"question\": \"What is the name of the magical flower?\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/ask",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "ask"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"user_name\": \"Test User\",\n  \"question\": \"What is the name of the magical flower?\",\n  \"answer\": \"The name of the magical flower is \\\"Luz de Luna.\\\" 🌸🌙\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    }
+  ]
+}
