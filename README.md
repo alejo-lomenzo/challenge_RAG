@@ -50,7 +50,7 @@ docker run --env-file .env -p 8000:8000 challenge-rag
 
 La ingesta del documento y el startup de la API ocurren automaticamente dentro del contenedor.
 
-## Sin Docker (alternativa)
+## Alternativa sin Docker
 
 ```bash
 python -m venv .venv
@@ -66,11 +66,36 @@ python -m app.ingestion.ingest
 uvicorn app.main:app --reload
 ```
 
-## Swagger UI
+## Pruebas con Postman
+
+El archivo `RAG_Collection.postman_collection.json` incluye los 3 casos 
+de prueba del challenge listos para ejecutar.
+
+**Importar en Postman:**
+1. Abrir Postman
+2. Click en **Import**
+3. Seleccionar el archivo `RAG_Collection.postman_collection.json`
+4. Ejecutar los requests con la API corriendo en `localhost:8000`
+
+## Prueba desde el Swagger UI
 
 `http://localhost:8000/docs`
 
-## Probar desde la terminal
+**Pasos para probar:**
+1. Abrir la URL en el navegador con la API corriendo
+2. Hacer click en `POST /ask`
+3. Click en **Try it out**
+4. Reemplazar el body con la pregunta deseada:
+```json
+{
+  "user_name": "John Doe",
+  "question": "¿Quién es Zara?"
+}
+```
+5. Click en **Execute**
+6. Ver la respuesta en el campo **Response body**
+
+## Prueba desde la terminal
 
 **Linux / Mac / Git Bash:**
 
