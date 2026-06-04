@@ -19,7 +19,7 @@ challenge_RAG/
 │   │   └── llm.py                    # Chat LLM + deteccion de idioma
 │   └── ingestion/
 │       └── ingest.py                 # Carga, split y persistencia del documento
-├── documento/
+├── data/
 │   └── documento.docx                # Documento fuente
 ├── requirements.txt
 ├── .env.example
