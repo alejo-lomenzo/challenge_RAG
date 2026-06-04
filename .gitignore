@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ChromaDB local persistence
+chroma_db/
+
+# Project specific
+querys_examples.md
