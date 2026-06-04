@@ -19,7 +19,7 @@ challenge_RAG/
 │   │   └── llm.py                    # Chat LLM + deteccion de idioma
 │   └── ingestion/
 │       └── ingest.py                 # Carga, split y persistencia del documento
-├── data/
+├── documento/
 │   └── documento.docx                # Documento fuente
 ├── requirements.txt
 ├── .env.example
@@ -42,6 +42,7 @@ cp .env.example .env    # completar con tu OPENAI_API_KEY
 
 > ⚠️ La API key debe estar sin comillas: `OPENAI_API_KEY=sk-proj-tukey`
 
+> ⚠️ ATENCION: Debes tener Docker Desktop corriendo en tu maquina para ejecutar el siguiente comando.
 ```bash
 docker build -t challenge-rag .
 docker run --env-file .env -p 8000:8000 challenge-rag
