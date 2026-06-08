@@ -56,6 +56,9 @@ def run_ingestion() -> None:
         chunk_id = f"chunk_{i}"
         chunk_text = chunk.page_content
 
+        if not chunk_text.strip():
+            continue
+
         embedding = get_embedding(chunk_text)
 
         ids.append(chunk_id)

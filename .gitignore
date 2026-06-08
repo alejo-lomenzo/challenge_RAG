@@ -222,3 +222,10 @@ chroma_db/
 
 # Project specific
 querys_examples.md
+
+#Agent Skills
+.agents/
+skills_installed.json
+skils-lock.json
+
+
